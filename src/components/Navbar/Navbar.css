@@ -1,0 +1,32 @@
+
+.navbar {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+.cartBtn{
+    background-color: white;
+    border-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 3rem;
+    font-size: 30px;
+}
+
+.cartImg{
+    width: 30px;
+}
+
+
+.btnNavbar{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+
+
