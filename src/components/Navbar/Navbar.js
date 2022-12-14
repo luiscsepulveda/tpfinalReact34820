@@ -1,8 +1,8 @@
-import './Navbar.css'
+/* import './Navbar.css'
 
-import Button from '../Button/Button'
+import Button from '../Button/Button' */
 /* import Logo from '../Logo/logo' */
-import CartWidget from '../CartWidget/CartWidget'
+/* import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = (props) => {
     console.log(props)
@@ -34,5 +34,22 @@ const handleOnClick3 = () => {
     )
 }
 
-export default Navbar
+export default Navbar */
 
+import { Link } from "react-router-dom"
+
+const Navbar =() => {
+
+    return (
+    <nav>
+        <h1>Ecommerce</h1>
+        <div>
+            <Link to= '/'>Ver todo</Link>
+            <Link to= '/category/tshirt'> Tshirts</Link>
+            <Link to= '/category/Mujer'> mujer</Link>
+        </div>
+    </nav>
+    )
+}
+
+export default Navbar
