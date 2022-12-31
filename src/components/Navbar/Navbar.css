@@ -1,8 +1,24 @@
 
 .navbar {
+    /* background-image: linear-gradient(to left, #073763 0%, white 100%); */
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: flex;
-    align-content: center;
+    margin-top: 1px;
+    
+    align-items: center;
     justify-content: space-between;
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    
+
+    
+    
 
 }
 
@@ -11,21 +27,28 @@
     border-style: none;
     display: flex;
     justify-content: flex-end;
-    margin-left: 3rem;
+   /*  margin-left: 3rem; */
     font-size: 30px;
+    padding-right: 1rem;
+    
 }
+
 
 .cartImg{
     width: 30px;
 }
 
+.cartBtn:hover{
+    color: #daa520;
+}
+
 
 .btnNavbar{
     display: flex;
-    align-content: center;
-    justify-content: space-around;
-    margin: auto;
+    justify-content: space-evenly;
+    width: 100%;
 }
+
 
 
 

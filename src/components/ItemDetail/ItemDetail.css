@@ -1,0 +1,39 @@
+.productDetail{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin: 6rem;
+}
+
+.sumaCarrito{
+    display: flex;
+
+    justify-content: center;
+    flex-direction: row;
+    font-size:xx-large;
+
+    margin-top: 1rem;
+    
+}
+
+.mostrarCarro{
+text-decoration: none;
+border-radius: 10px;
+width: 300px;
+height: 45px;
+font-size: xx-large;
+background-color: goldenrod;
+flex: none;
+display: flex;
+justify-content: center;
+align-self: center;
+color: white;
+cursor: pointer;
+outline: 4px;
+margin-top: 2rem;
+box-shadow: 1px 1px 10px black
+
+
+
+}

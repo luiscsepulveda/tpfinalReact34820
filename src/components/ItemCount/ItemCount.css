@@ -1,0 +1,50 @@
+.sumaCarrito{
+    display: flex;
+    align-items: center;
+}
+
+.buttonCount{
+
+text-decoration: none;
+border-radius: 10px;
+width: 50px;
+height: 45px;
+font-size: xx-large;
+background-color: rgb(24, 24, 232);
+flex: none;
+display: flex;
+justify-content: center;
+align-self: center;
+color: white;
+cursor: pointer;
+
+
+
+}
+
+.numberCart{
+    font-size: 50px;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+}
+
+.buttonCountCar{
+
+text-decoration: none;
+border-radius: 10px;
+width: 300px;
+height: 45px;
+font-size: xx-large;
+background-color: goldenrod;
+flex: none;
+color: white;
+cursor: pointer;
+outline: inherit;
+margin-left: 1rem;
+box-shadow: 1px 1px 10px black
+
+
+}

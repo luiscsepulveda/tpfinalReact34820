@@ -36,18 +36,30 @@ const handleOnClick3 = () => {
 
 export default Navbar */
 
+import './Navbar.css'
+
+import CartWidget from '../CartWidget/CartWidget'
+import Logo from '../Logo/logo'
+
 import { Link } from "react-router-dom"
 
 const Navbar =() => {
 
     return (
-    <nav>
-        <h1>Ecommerce</h1>
-        <div>
-            <Link to= '/'>Ver todo</Link>
-            <Link to= '/category/tshirt'> Tshirts</Link>
-            <Link to= '/category/Mujer'> mujer</Link>
+    <nav className='navbar'>
+        <section>
+            <Logo />
+        </section>
+        <div className='btnNavbar'>
+            <Link to= '/'>Inicio </Link>
+            <Link to= '/'>About Us </Link>
+            <Link to= '/category/Man'> Hombre</Link>
+            <Link to= '/category/Mujer'> Mujer</Link>
+            <Link to= '/'> Contact </Link>
         </div>
+        <section>
+            <CartWidget />
+        </section>
     </nav>
     )
 }

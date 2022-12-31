@@ -1,0 +1,32 @@
+.containerH{
+
+    margin-bottom: 3rem;
+
+}
+
+.banner1{
+    padding-top: 0;
+    margin-top: 0rem;
+    padding-top: 10rem;
+}
+
+.homeTitle{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.homeBanner{
+    width: 100%;
+    background-size: cover;
+    
+
+}
+
+
+
