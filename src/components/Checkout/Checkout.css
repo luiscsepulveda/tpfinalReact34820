@@ -1,0 +1,66 @@
+.checkout{
+    height: 900px;
+padding-top: 10rem
+
+}
+
+.precesarPedido{
+    text-decoration: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 45px;
+    font-size: xx-large;
+    background-color: goldenrod;
+    flex: none;
+    color: white;
+    cursor: pointer;
+    outline: inherit;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    box-shadow: 1px 1px 10px black
+}
+
+
+    .error {
+        color: #fc8181;
+        font-size: 0.75rem;
+        text-align: left;
+        margin-top: 0.25rem;
+    }
+
+    form {
+        width: 95%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    form label {
+        font-size: 1rem;
+        font-weight: bold;
+        display: block;
+        text-align: left;
+        margin: 1rem 0 0.2rem;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 0.65rem 0.5rem;
+        font-size: 1rem;
+        color: midnightblue;
+        border: 2px solid #003d6f;
+        background-color: white;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: goldenrod;
+    }
+
+    input::placeholder,
+    select::placeholder {
+        color: rgb(221, 221, 222);
+    }
+

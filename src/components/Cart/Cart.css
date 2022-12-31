@@ -5,6 +5,10 @@
 
 }
 
+.cart img{
+    width: 200px;
+}
+
 .eliminarProducto{
 
 text-decoration: none;
@@ -28,5 +32,25 @@ margin-bottom: 2rem;
     justify-content: space-evenly;
     align-items: center;
 
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
+}
+
+.btnPagar{
+    margin-top: 3rem;
+    
+
+}
+
+.toPay{
+    text-decoration: none;
+    border-radius: 10px;
+
+    background-color: goldenrod;
+    flex: none;
+    color: white;
+    cursor: pointer;
+    outline: inherit;
+    box-shadow: 1px 1px 10px black
+    
+
 }

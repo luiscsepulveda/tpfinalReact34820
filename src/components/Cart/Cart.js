@@ -37,7 +37,11 @@ return (
         }
         <h1> Total : {total}</h1>
 
-        <Link to='/checkout'>Ir a pagar</Link>
+        <div className="btnPagar">
+
+            <Link className="toPay" to='/checkout'>Ir a pagar</Link>
+
+        </div>
     </div>
 
 )
