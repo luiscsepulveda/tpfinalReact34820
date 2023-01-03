@@ -19,7 +19,7 @@ return (
                     <div className="detalleCompra" key={prod.id}>
                         
                             
-                            
+                            <img rsc={prod.img} alt=""></img>
                             <h1> {prod.name}</h1>
                             <h2>$ {prod.price}</h2>
                             <h2>Cantidad: {prod.quantity}</h2> 

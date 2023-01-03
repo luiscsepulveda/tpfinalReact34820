@@ -23,18 +23,16 @@ const Checkout = () => {
     
     
         const  {
-            values,
             errors,
             touched,
             isSubmitting,
             handleBlur,
-            handleChange,
-            handleSubmit,
+            
         } = useFormik({
             initialValues: {
             name: "",
             email: "",
-            edad: "",
+            phone: "",
             password: "",
             confirmPassword: "",
             },
@@ -46,7 +44,9 @@ const Checkout = () => {
     const { cart,getTotal, clearCart } = useContext(CartContext)
     const [ loading, setLoading ] = useState(false)
     const navigate = useNavigate()
-
+    const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [phone, setPhone] = useState("");
 
 
 
@@ -57,9 +57,9 @@ const Checkout = () => {
         try{
             const datosCliente = {
                 buyer: { 
-                    name: 'name',
-                    email: 'email',
-                    phone: 'phone'
+                    name: name,
+                    email: email,
+                    phone: phone,
                 },
                 items: cart,
                 total: getTotal()
@@ -113,7 +113,7 @@ const Checkout = () => {
                     Swal("Sin stock, Se llevaron la ultima unidad");
                 }
             }catch (error) {
-                console.log('Intentalo nuevamente');
+                console.error('Intentalo nuevamente');
 
             }finally {
                     setLoading(false)
@@ -125,6 +125,11 @@ const Checkout = () => {
         return <h1>Procesando orden...</h1>
 
     }
+
+    const handleSubmit = (e) => {
+		e.preventDefault();
+		handleCreateOrder();
+	};
 
 
     return (
@@ -139,18 +144,18 @@ const Checkout = () => {
             <form onSubmit={handleSubmit} autoComplete="off">
                 <label htmlFor="name">Nombre</label>
                 <input
-                    value={values.name}
-                    onChange={handleChange}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     id="name"
-                    type="name"
+                    type="text"
                     placeholder="Ingrese su nombre"
                     onBlur={handleBlur}
                     className={errors.name && touched.name ? "input-error" : ""}/>
                 {errors.name && touched.name && <p className="error">{errors.name}</p>}
                 <label htmlFor="email">Email</label>
                 <input
-                    value={values.email}
-                    onChange={handleChange}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email"
                     type="email"
                     placeholder="Ingrese su email"
@@ -158,54 +163,24 @@ const Checkout = () => {
                     className={errors.email && touched.email ? "input-error" : ""}
                 />
                 {errors.email && touched.email && <p className="error">{errors.email}</p>}
-                <label htmlFor="age">Edad</label>
+                <label htmlFor="phone">Telefono</label>
                 <input
-                    id="edad"
+                    id="phone"
                     type="number"
-                    placeholder="Ingrese su edad"
-                    value={values.edad}
-                    onChange={handleChange}
+                    placeholder="Ingrese su telefono"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     onBlur={handleBlur}
-                    className={errors.edad && touched.edad ? "input-error" : ""}
+                    className={errors.phone && touched.phone ? "input-error" : ""}
                 />
-                {errors.edad && touched.edad && <p className="error">{errors.edad}</p>}
-                <label htmlFor="password">Password</label>
-                <input
-                    id="password"
-                    type="password"
-                    placeholder="Ingrese su contraseña"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={errors.password && touched.password ? "input-error" : ""}
-                />
-                {errors.password && touched.password && (
-                    <p className="error">{errors.password}</p>
-                )}
-                <label htmlFor="confirmPassword">Repita su contraseña</label>
-                <input
-                    id="confirmPassword"
-                    type="password"
-                    placeholder="Repita su contraseña"
-                    value={values.confirmPassword}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={
-                    errors.confirmPassword && touched.confirmPassword ? "input-error" : ""
-                    }
-                />
-                {errors.confirmPassword && touched.confirmPassword && (
-                    <p className="error">{errors.confirmPassword}</p>
-                )}
+                {errors.phone && touched.phone && <p className="error">{errors.phone}</p>}
+                
                 <button className="precesarPedido" onClick={handleCreateOrder} disabled={isSubmitting} type="submit">
                     Procesar pedido
                 </button>
             </form>
 
             {/* form finished */}
-
-        
-            {/* <button className="precesarPedido" onClick={handleCreateOrder}>Procesar pedido</button> */}
         </div>
     )
 }
